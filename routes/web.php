@@ -14,11 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings');
 });
-Route::get('/hello',function (){
-    return response('<h1> Hello </h1>');
-});
-Route::get('/posts{id}', function ($id){
-    return response('Post '.$id);
-})->where('id','[0-9]+');
