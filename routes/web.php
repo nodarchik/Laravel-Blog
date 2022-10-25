@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// All Posts
 Route::get('/', function () {
-    return view('listings');
+    return view('posts',[
+        'heading'=>'Latest Posts',
+        'posts'=>Post::all()
+    ]);
+});
+// Single Post
+Route::get('/posts/{id}', function ($id){
+    return view('post',[
+        'post'=>Post::find($id)
+    ]);
 });

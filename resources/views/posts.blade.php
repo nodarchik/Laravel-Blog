@@ -1,0 +1,21 @@
+@extends('layout')
+
+@section('content')
+<h1>{{$heading}}</h1>
+
+@unless(count($posts)==0)
+
+@foreach ($posts as $post)
+<h2>
+    <a href="/posts/{{$post['id']}}"> {{$post['title']}} </a>
+</h2>
+<p>
+    {{$post['description']}}
+</p>
+@endforeach
+
+@else
+    <p>No Posts found</p>
+@endunless
+
+@endsection
