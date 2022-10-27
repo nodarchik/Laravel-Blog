@@ -15,7 +15,6 @@ use App\Models\Post;
 // All Posts
 Route::get('/', function () {
     return view('posts',[
-        'heading'=>'Latest Posts',
         'posts'=>Post::all()
     ]);
 });
