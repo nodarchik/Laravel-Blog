@@ -24,3 +24,11 @@ Route::get('/posts/{id}', function ($id){
         'post'=>Post::find($id)
     ]);
 });
+// Login Page
+Route::get('/login', function (){
+    return view('login');
+});
+// Registration Page
+Route::get('/register', function (){
+    return view('register');
+});

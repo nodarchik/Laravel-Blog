@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 1vmax;
+    background: black;
 }
 .header{
     height: 6vh;
@@ -16,8 +17,8 @@
     background: #a0aec0;
 }
 .header_text{
-    display: grid;
-    place-items: center;
+    position: relative;
+    left: 1vw;
     font-size: 2vmax;
 }
 .main_posts{
@@ -40,7 +41,8 @@
     background: #a0aec0;
 }
 .post_page{
-    height: 94vh;
+    height: 90vh;
+    width: 99vw;
     display: grid;
     grid-template-rows: 2fr 8fr;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0);
@@ -52,4 +54,23 @@
 .post_header{
     color: #FFFFFF;
     background: #495058;
+}
+.login_page{
+    display: grid;
+    place-items: center;
+    position: relative;
+    top: 20vh;
+}
+.login_form{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0);
+    width: fit-content;
+    height: 20vh;
+    min-height: fit-content;
+    text-align: center;
+    align-content: center;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2vh;
+    grid
 }
